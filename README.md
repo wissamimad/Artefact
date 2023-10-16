@@ -45,9 +45,9 @@ flask run
 After the app is running, call the endpoints:
 ```bash
 # Get all articles from the database
-curl "http://localhost:5000/api/article_by_headline
+curl http://localhost:5000/api/article_by_headline
 or
-curl "http://localhost:5000/api/article_by_content"
+curl http://localhost:5000/api/article_by_content
 
 # Get articles by headline keywords:
 curl http://localhost:8000/api/article_by_headline?keywords=<VALUE>
