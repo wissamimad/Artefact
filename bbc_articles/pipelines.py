@@ -27,6 +27,7 @@ class MongoPipeline:
     def close_spider(self, spider):
         self.client.close()
 
+    # Insert the document if it doesn't exists
     def process_item(self, item, spider):
         item_dict = ItemAdapter(item).asdict()
         self.collection.update_one(

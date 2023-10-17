@@ -17,13 +17,14 @@ mongo_db_password = os.environ.get("db_password")
 encoded_username = urllib.parse.quote_plus(mongo_db_username)
 encoded_password = urllib.parse.quote_plus(mongo_db_password)
 
-# mongo_db_url = os.environ.get("MONGO_DB_CONN_STRING")
+# construct the MongoDB connection string
 mongo_db_url = f'mongodb+srv://{encoded_username}:{encoded_password}@cluster0.kb6g8wm.mongodb.net/?retryWrites=true&w=majority'
 
 client = MongoClient(mongo_db_url)
 db = client['Artefact']
 collection = db['bbc_news']
 
+# Search for all articles or for a specific keyword in the content
 @app.get("/api/article_by_content")
 def get_articles_by_content():
     keywords = request.args.get('keywords')
@@ -34,6 +35,7 @@ def get_articles_by_content():
         response=dumps(articles), status=200,  mimetype="application/json")
     return response
 
+# Search for all articles or for a specific keyword in the headline
 @app.get("/api/article_by_headline")
 def get_articles_by_headline():
     keywords = request.args.get('keywords')

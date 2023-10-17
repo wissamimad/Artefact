@@ -23,6 +23,7 @@ mongo_db_password = os.environ.get("db_password")
 encoded_username = urllib.parse.quote_plus(mongo_db_username)
 encoded_password = urllib.parse.quote_plus(mongo_db_password)
 
+# construct the MongoDB connection string
 MONGO_URI = f'mongodb+srv://{encoded_username}:{encoded_password}@cluster0.kb6g8wm.mongodb.net/?retryWrites=true&w=majority&ssl=true'
 MONGO_DATABASE = "Artefact"
 MONGODB_COLLECTION = "bbc_news"
