@@ -3,6 +3,7 @@ This is a technical assessment done for Atefact.
 The code is designed to crawl a news website (http://www.bbc.com/news). Then the code inserts the scraped data into MongoDB and then it's accessible by API.
 
 ## Installation
+Python is expected to be installed on your machine.
 Change directory to the top level of the project and run:
 
 ```bash
