@@ -10,8 +10,8 @@ load_dotenv()
 app = Flask(__name__)
 
 # Get the username and password from the .env file
-mongo_db_username = os.environ.get("username")
-mongo_db_password = os.environ.get("password")
+mongo_db_username = os.environ.get("db_username")
+mongo_db_password = os.environ.get("db_password")
 
 # Encode the username and password
 encoded_username = urllib.parse.quote_plus(mongo_db_username)
