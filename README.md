@@ -12,8 +12,8 @@ pip install -r requirements.txt
 ## Configuration
 
 Create a  ```.env ``` file and fill in the below:
-_`db_username` : The username to access the MongoDB.
-_`db_password` : The password to access the MongoDB.
+- `db_username` : The username to access the MongoDB.
+- `db_password` : The password to access the MongoDB.
 
 Then save the file in "bbc_articles" directory and "Backend" directory.
 
